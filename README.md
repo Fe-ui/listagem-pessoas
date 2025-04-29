@@ -25,6 +25,7 @@
 
     ```bash
     npm install
+    ng add @angular/material
     ```
 
 3. Inicie o servidor de desenvolvimento do frontend:
