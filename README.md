@@ -1,7 +1,9 @@
 ### Projeto Listagem Pessoas 
 
 -Este projeto é uma aplicação Angular que exibe uma tabela de pessoas com funcionalidades de filtro e paginação.
+
 -Ele utiliza o Angular Material para a interface.
+
 -O frontend consome uma Web API ASP.NET CORE que fornece os dados das pessoas.
 
 ## Requisitos
