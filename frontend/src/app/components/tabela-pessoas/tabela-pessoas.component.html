@@ -1,0 +1,64 @@
+<div class="container">
+  <h1 class="title">Listagem de Pessoas</h1>
+
+  <div class="controls">
+    <mat-form-field appearance="outline" class="custom-filter">
+      <mat-label>Filtrar por Nome</mat-label>
+      <input matInput [(ngModel)]="filterValue" (keyup)="applyFilter()">
+    </mat-form-field>
+
+    <button mat-raised-button color="accent" (click)="carregarPessoas()" class="custom-button">
+      Carregar Pessoas
+    </button>
+  </div>
+
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 custom-table">
+    
+    <!-- CPF -->
+    <ng-container matColumnDef="cpf">
+      <th mat-header-cell *matHeaderCellDef> CPF </th>
+      <td mat-cell *matCellDef="let pessoa"> {{pessoa.cpf}} </td>
+    </ng-container>
+
+    <!-- Nome -->
+    <ng-container matColumnDef="nome">
+      <th mat-header-cell *matHeaderCellDef> Nome </th>
+      <td mat-cell *matCellDef="let pessoa"> {{pessoa.nome}} </td>
+    </ng-container>
+
+    <!-- Gênero -->
+    <ng-container matColumnDef="genero">
+      <th mat-header-cell *matHeaderCellDef> Gênero </th>
+      <td mat-cell *matCellDef="let pessoa"> {{pessoa.genero}} </td>
+    </ng-container>
+
+     <!-- Idade -->
+     <ng-container matColumnDef="idade">
+      <th mat-header-cell *matHeaderCellDef> Idade </th>
+      <td mat-cell *matCellDef="let pessoa"> {{pessoa.idade}} </td>
+    </ng-container>
+
+    <!-- Endereço -->
+    <ng-container matColumnDef="endereco">
+      <th mat-header-cell *matHeaderCellDef> Endereço </th>
+      <td mat-cell *matCellDef="let pessoa"> {{pessoa.endereco}} </td>
+    </ng-container>
+
+    <!-- Município -->
+    <ng-container matColumnDef="municipio">
+      <th mat-header-cell *matHeaderCellDef> Município </th>
+      <td mat-cell *matCellDef="let pessoa"> {{pessoa.municipio}} </td>
+    </ng-container>
+
+    <!-- Estado -->
+    <ng-container matColumnDef="estado">
+      <th mat-header-cell *matHeaderCellDef> Estado </th>
+      <td mat-cell *matCellDef="let pessoa"> {{pessoa.estado}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns" class="header-row"></tr>
+    <tr mat-row *matRowDef="let pessoa; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSize]="10" showFirstLastButtons></mat-paginator>
+</div>

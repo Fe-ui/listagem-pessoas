@@ -1,0 +1,55 @@
+.container {
+  padding: 20px;
+  background-color: #f5f7fa;
+  text-align: center;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #1976d2;
+  margin-bottom: 20px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.custom-filter {
+  width: 300px;
+}
+
+.custom-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.custom-table {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.header-row {
+  background-color: #1976d2;
+  color: white;
+}
+
+.mat-header-cell {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.mat-cell {
+  font-size: 13px;
+}
+
+.mat-form-field {
+  background-color: white;
+}
